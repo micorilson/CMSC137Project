@@ -8,8 +8,8 @@ public class ChatServer{
     private static final int maxclient = 100;
     private static final clientThread[] threads = new clientThread[maxclient];
 
-    public static void main(String [] args){
-        int port = Integer.parseInt(args[0]);
+    public ChatServer(String portstr){
+        int port = Integer.parseInt(portstr);
 
         try {
           serverSocket = new ServerSocket(port);
